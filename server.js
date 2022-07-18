@@ -51,7 +51,9 @@ app.get(/.*/, (req, res) => {
 });
 // }
 
-app.listen(app.get('port'));
+app.listen(app.get('port'), () => {
+  console.log(`Running port ${app.get('port')}`);
+});
 
 // Init MongoDB
 initMongo();
